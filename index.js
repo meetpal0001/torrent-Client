@@ -3,5 +3,13 @@ import bencode from 'bencode';
 
 import * as fs from 'fs';
 
-const torrent = bencode.decode(fs.readFileSync('puppy.torrent'));
-console.log(torrent.announce.toString('utf8'));
+import {getPeers} from './src/tracker.js'
+import {open} from './src/torrent-parser.js'
+
+
+
+const torrent = open('puppy.torrent');
+
+getPeers(torrent, peers => {
+  console.log('list of peers: ', peers);
+});

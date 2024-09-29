@@ -1,13 +1,18 @@
 {
   "dependencies": {
     "bencode": "^4.0.0",
-    "fs": "^0.0.1-security"
+    "bn.js": "^5.2.1",
+    "buffer": "^6.0.3",
+    "Buffer": "^0.0.0",
+    "crypto": "^1.0.1",
+    "dgram": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "url": "^0.11.4"
   },
   "name": "torrent-client",
   "version": "1.0.0",
   "description": "A torrent client which helps user download using P2P",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
