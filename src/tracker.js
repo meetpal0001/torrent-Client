@@ -71,7 +71,7 @@ function buildAnnounceReq(connId, torrent, port = 6881) {
     // info hash
     torrentParser.infoHash(torrent).copy(buf, 16);
     // peerId
-    util.genId().copy(buf, 36);
+    genId().copy(buf, 36);
     // downloaded
     Buffer.alloc(8).copy(buf, 56);
     // left
